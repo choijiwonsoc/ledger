@@ -1,0 +1,26 @@
+In a Go project we will have 
+- *.go files: Go source code
+- go.mod: describing module/project and dependencies
+- go.sum: checksum to verify downloaded dependency versions
+
+go mod init - when creating new Go project
+**go mod init github.com/choijiwonsoc/ledger** >> go.mod
+github.com/choijiwonsoc/ledger - prefix used when importing packages
+main.go can import import "github.com/choijiwonsoc/internal/account"
+
+go mod tidy - clean up project dependencies
+synchronise dependencies based on what code actly imports
+add/remove modules/requirements
+
+go run 
+**go run main.go** / ** go run . " - run package in curr dir
+
+go build - compile your program
+go build >> my-project.exe - produces binary executable ?? ./my-project.exe
+
+go test
+**go test** - run test for the current package
+**go test ./..."** - run test for this package and underneath here recursively
+**go test -run TestCReatePayment** - specific test
+
+go fmt ./...
